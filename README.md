@@ -1,6 +1,6 @@
-# Website Portfolio - Tran Cong Minh Duc
+# Website Portfolio - Trần Công Minh Đức
 
-Một website portfolio cá nhân hiện đại, đáp ứng cho Tran Cong Minh Duc, sinh viên năm 2 chuyên ngành Thiết kế Đồ họa & CNTT.
+Một website portfolio cá nhân hiện đại, đáp ứng cho Trần Công Minh Đức, sinh viên năm 2 chuyên ngành Thiết kế Đồ họa & CNTT.
 
 ## Tính năng
 
