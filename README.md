@@ -1,59 +1,59 @@
-# Portfolio Website - Tran Cong Minh Duc
+# Website Portfolio - Tran Cong Minh Duc
 
-A modern, responsive personal portfolio website for Tran Cong Minh Duc, a second-year university student specializing in Graphic Design & IT.
+Một website portfolio cá nhân hiện đại, đáp ứng cho Tran Cong Minh Duc, sinh viên năm 2 chuyên ngành Thiết kế Đồ họa & CNTT.
 
-## Features
+## Tính năng
 
-- **Minimalist Design**: Clean, creative, and professional aesthetic
-- **Dark Mode**: Modern dark theme with elegant typography
-- **Responsive**: Optimized for both mobile and desktop devices
-- **Smooth Animations**: Subtle transitions and hover effects
-- **Glassmorphism**: Modern UI with glass-like elements
-- **SEO Friendly**: Semantic HTML and proper meta tags
+- **Thiết kế Tối giản**: Phong cách thẩm mỹ sạch sẽ, sáng tạo và chuyên nghiệp
+- **Chế độ Tối**: Chủ đề tối hiện đại với kiểu chữ thanh lịch
+- **Đáp ứng**: Tối ưu hóa cho cả thiết bị di động và máy tính để bàn
+- **Hoạt hình Mượt mà**: Chuyển tiếp và hiệu ứng di chuột tinh tế
+- **Glassmorphism**: Giao diện người dùng hiện đại với các yếu tố giống kính
+- **Thân thiện với SEO**: HTML ngữ nghĩa và thẻ meta phù hợp
 
-## Sections
+## Các phần
 
-1. **Hero Section**: Introduction with name, title, slogan, and call-to-action
-2. **About Section**: Personal introduction, skills, and profile image
-3. **Portfolio Section**: Placeholder for future work showcase
-4. **Contact Section**: Contact information and social links
+1. **Phần Hero**: Giới thiệu với tên, chức danh, slogan và lời kêu gọi hành động
+2. **Phần Giới thiệu**: Giới thiệu cá nhân, kỹ năng và ảnh hồ sơ
+3. **Phần Portfolio**: Trình giữ chỗ cho việc trưng bày công việc trong tương lai
+4. **Phần Liên hệ**: Thông tin liên hệ và liên kết mạng xã hội
 
-## Technologies Used
+## Công nghệ được sử dụng
 
 - HTML5
-- CSS3 (with modern features like backdrop-filter)
+- CSS3 (với các tính năng hiện đại như backdrop-filter)
 - JavaScript (ES6+)
 - Google Fonts (Inter)
-- Font Awesome Icons
+- Biểu tượng Font Awesome
 
-## Getting Started
+## Bắt đầu
 
-1. Clone the repository
-2. Open `index.html` in your browser or serve with a local server
-3. For development, use a local server to avoid CORS issues with external resources
+1. Sao chép kho lưu trữ
+2. Mở `index.html` trong trình duyệt của bạn hoặc phục vụ với máy chủ cục bộ
+3. Để phát triển, sử dụng máy chủ cục bộ để tránh vấn đề CORS với tài nguyên bên ngoài
 
-## Local Development
+## Phát triển cục bộ
 
-Run a simple HTTP server:
+Chạy máy chủ HTTP đơn giản:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000` in your browser.
+Sau đó truy cập `http://localhost:8000` trong trình duyệt của bạn.
 
-## Customization
+## Tùy chỉnh
 
-- Update personal information in `index.html`
-- Modify styles in `styles.css`
-- Add interactivity in `script.js`
-- Replace placeholder profile image with actual photo
+- Cập nhật thông tin cá nhân trong `index.html`
+- Sửa đổi kiểu dáng trong `styles.css`
+- Thêm tính tương tác trong `script.js`
+- Thay thế ảnh hồ sơ giữ chỗ bằng ảnh thật
 
-## Browser Support
+## Hỗ trợ Trình duyệt
 
-- Chrome (recommended)
+- Chrome (khuyến nghị)
 - Firefox
 - Safari
 - Edge
 
-Modern browsers with support for CSS backdrop-filter and ES6+ JavaScript.
+Các trình duyệt hiện đại hỗ trợ CSS backdrop-filter và JavaScript ES6+.

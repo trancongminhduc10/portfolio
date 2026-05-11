@@ -1,4 +1,4 @@
-// Smooth scrolling for navigation links
+// Cuộn mượt mà cho các liên kết điều hướng
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -12,7 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for animations
+// Intersection Observer cho hoạt hình
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -26,12 +26,12 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe sections for animation
+// Quan sát các phần cho hoạt hình
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Add scroll effect to navigation
+// Thêm hiệu ứng cuộn cho điều hướng
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (window.scrollY > 100) {
@@ -41,7 +41,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Typing effect for hero slogan (optional enhancement)
+// Hiệu ứng gõ chữ cho slogan hero (tùy chọn nâng cao)
 const slogan = document.querySelector('.hero-slogan');
 const originalText = slogan.textContent;
 slogan.textContent = '';
@@ -55,12 +55,12 @@ function typeWriter() {
     }
 }
 
-// Start typing effect after page load
+// Bắt đầu hiệu ứng gõ chữ sau khi tải trang
 window.addEventListener('load', () => {
     setTimeout(typeWriter, 1000);
 });
 
-// Parallax effect for floating elements (subtle)
+// Hiệu ứng parallax cho các phần tử nổi (nhẹ nhàng)
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const rate = scrolled * -0.5;
