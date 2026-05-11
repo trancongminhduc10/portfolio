@@ -1,5 +1,53 @@
+// ============= Theme Toggle Functionality =============
+
+// Initialize theme on page load
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme-preference') || 'dark';
+    applyTheme(savedTheme);
+}
+
+// Apply theme to document
+function applyTheme(theme) {
+    const html = document.documentElement;
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    if (theme === 'light') {
+        body.classList.add('light-mode');
+        html.setAttribute('data-theme', 'light');
+        if (themeToggle) {
+            themeToggle.classList.add('active');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    } else {
+        body.classList.remove('light-mode');
+        html.setAttribute('data-theme', 'dark');
+        if (themeToggle) {
+            themeToggle.classList.remove('active');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+    }
+    
+    localStorage.setItem('theme-preference', theme);
+}
+
+// Toggle theme function
+function toggleTheme() {
+    const currentTheme = localStorage.getItem('theme-preference') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme);
+}
+
+// Set up theme toggle button
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+}
+
+// ============= Smooth Scroll Navigation =============
+
 // Cuộn mượt mà cho các liên kết điều hướng
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
@@ -11,6 +59,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ============= Intersection Observer =============
 
 // Intersection Observer cho hoạt hình
 const observerOptions = {
@@ -31,6 +81,8 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
+// ============= Scroll Effects =============
+
 // Thêm hiệu ứng cuộn cho điều hướng
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
@@ -41,7 +93,9 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Hiệu ứng gõ chữ cho slogan hero (tùy chọn nâng cao)
+// ============= Hero Slogan Typewriter Effect =============
+
+// Hiệu ứng gõ chữ cho slogan hero
 const slogan = document.querySelector('.hero-slogan');
 const originalText = slogan.textContent;
 slogan.textContent = '';
@@ -59,6 +113,8 @@ function typeWriter() {
 window.addEventListener('load', () => {
     setTimeout(typeWriter, 1000);
 });
+
+// ============= Parallax Effects =============
 
 // Hiệu ứng parallax cho các phần tử nổi (nhẹ nhàng)
 window.addEventListener('scroll', () => {
