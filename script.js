@@ -3,45 +3,90 @@
 // Initialize theme on page load
 function initializeTheme() {
     const savedTheme = localStorage.getItem('theme-preference') || 'dark';
-    applyTheme(savedTheme);
+    applyTheme(savedTheme, false);
 }
 
-// Apply theme to document
-function applyTheme(theme) {
+// Apply theme to document with smooth transition
+function applyTheme(theme, animate = true) {
     const html = document.documentElement;
     const body = document.body;
     const themeToggle = document.getElementById('theme-toggle');
     
     if (theme === 'light') {
-        body.classList.add('light-mode');
-        html.setAttribute('data-theme', 'light');
-        if (themeToggle) {
-            themeToggle.classList.add('active');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        if (animate) {
+            body.style.transition = 'none';
+            body.classList.add('light-mode');
+            html.setAttribute('data-theme', 'light');
+            
+            if (themeToggle) {
+                themeToggle.classList.add('active');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+            
+            setTimeout(() => {
+                body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
+            }, 10);
+        } else {
+            body.classList.add('light-mode');
+            html.setAttribute('data-theme', 'light');
+            if (themeToggle) {
+                themeToggle.classList.add('active');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
         }
     } else {
-        body.classList.remove('light-mode');
-        html.setAttribute('data-theme', 'dark');
-        if (themeToggle) {
-            themeToggle.classList.remove('active');
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        if (animate) {
+            body.style.transition = 'none';
+            body.classList.remove('light-mode');
+            html.setAttribute('data-theme', 'dark');
+            
+            if (themeToggle) {
+                themeToggle.classList.remove('active');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+            
+            setTimeout(() => {
+                body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
+            }, 10);
+        } else {
+            body.classList.remove('light-mode');
+            html.setAttribute('data-theme', 'dark');
+            if (themeToggle) {
+                themeToggle.classList.remove('active');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
         }
     }
     
     localStorage.setItem('theme-preference', theme);
 }
 
-// Toggle theme function
+// Toggle theme function with smooth transition
 function toggleTheme() {
     const currentTheme = localStorage.getItem('theme-preference') || 'dark';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    applyTheme(newTheme);
+    applyTheme(newTheme, true);
 }
 
-// Set up theme toggle button
+// Set up theme toggle button with enhanced interaction
 const themeToggle = document.getElementById('theme-toggle');
 if (themeToggle) {
     themeToggle.addEventListener('click', toggleTheme);
+    
+    // Add keyboard support for accessibility
+    themeToggle.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleTheme();
+        }
+    });
+}
+
+// Initialize theme when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeTheme);
+} else {
+    initializeTheme();
 }
 
 // ============= Smooth Scroll Navigation =============
