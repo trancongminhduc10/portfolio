@@ -1,0 +1,20 @@
+/* Mobile Skills Section Responsive Styles - Add to end of @media (max-width: 480px) */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-card {
+        padding: 24px 16px;
+    }
+
+    .skill-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+
+    .skill-card h3 {
+        font-size: 1.1rem;
+    }
