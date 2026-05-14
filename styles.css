@@ -322,6 +322,7 @@ body.light-mode header {
     font-size: 1.1rem;
     color: var(--text-secondary);
     margin-bottom: 30px;
+    white-space: nowrap;
 }
 
 .skills h3 {
@@ -974,6 +975,7 @@ footer p {
     color: var(--text-secondary);
     font-size: 0.9rem;
     transition: color 0.5s ease;
+    white-space: nowrap;
 }
 
 /* Animations */
