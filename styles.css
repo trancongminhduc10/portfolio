@@ -200,6 +200,7 @@ body.light-mode header {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     transition: background 0.5s ease;
+    white-space: nowrap;
 }
 
 .hero-title {
