@@ -193,7 +193,7 @@ body.light-mode header {
 }
 
 .hero-name {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 10px;
     background: linear-gradient(45deg, var(--neon-cyan), var(--text-primary));
